@@ -194,4 +194,5 @@ footer {
     background: var(--color1a);
     box-shadow: 0 0 10px 1px rgb(1 2 3 / 50%);
     text-shadow: 2px 2px 4px var(--color3a);
+    text-decoration: none;
 }
