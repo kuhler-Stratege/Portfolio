@@ -36,7 +36,7 @@ nav a, h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-    color: black;
+    color: rgb(3, 2, 1);
     cursor: pointer;
 }
 
@@ -104,6 +104,7 @@ nav ul {
 .navSpan a {
     grid-area: text;
     margin: auto 5px;
+    text-shadow: 1px 1px 8px var(--color3a);
 }
 
 header {
@@ -180,4 +181,17 @@ footer {
 
 .gdprLink:hover {
     font-size: 14pt;
+}
+
+.bannerLinks {
+    position: absolute;
+    top: 270px;
+    right: 83px;
+}
+
+.bannerLinks a {
+    padding: 5px;
+    background: var(--color1a);
+    box-shadow: 0 0 10px 1px rgb(1 2 3 / 50%);
+    text-shadow: 2px 2px 4px var(--color3a);
 }
