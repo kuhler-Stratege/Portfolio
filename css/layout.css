@@ -1,0 +1,183 @@
+/** Farbset */
+:root {
+    --color1: #C8590BFF;
+    --color1a: #F69754;
+    --color1b: #EA7928;
+    --color1c: #A74500;
+    --color1d: #833600;
+    --color2: #077D6D;
+    --color2a: #359A8C;
+    --color2b: #199382;
+    --color2c: #00695A;
+    --color2d: #005247;
+    --color3: #C8940B;
+    --color3a: #FFFFC8;
+    --color3b: #EAB428;
+    --color3c: #A77900;
+    --color3d: #835F00;
+
+    --header-height: 300px;
+}
+
+body {
+    background: var(--color3a);
+    margin: 0 auto;
+    max-width: 1700px;
+}
+
+/** Schriftarten */
+*, .gdpr-link {
+    font-family: 'Ysabeau Infant', sans-serif;
+    font-size: 13pt;
+}
+
+nav a, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Monomaniac One', 'Ysabeau Infant', sans-serif;
+}
+
+a {
+    color: black;
+    cursor: pointer;
+}
+
+a:visited {
+    color: var(--color2a);
+}
+
+a:hover {
+    color: var(--color2c);
+    font-size: 14pt;
+    text-decoration: none;
+}
+
+nav a {
+    font-size: 15pt;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 37pt;
+}
+
+h3 {
+    font-size: 0.5em;
+}
+
+h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+/** Seitenanordnung */
+.wrapper {
+    display: grid;
+    grid-template-areas: "nav header" "nav main" "nav footer";
+    grid-template-columns: 220px auto;
+    grid-template-rows: var(--header-height) 80% 10%;
+}
+
+nav {
+    grid-area: nav;
+}
+
+nav ul {
+    list-style-type: none;
+    padding-inline: 0;
+}
+
+.navSpan {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.navSpan img {
+    grid-area: icon;
+    height: 30px;
+    margin: 5px;
+}
+
+.navSpan a {
+    grid-area: text;
+    margin: auto 5px;
+}
+
+header {
+    grid-area: header;
+}
+
+main {
+    grid-area: main;
+    margin-bottom: 10px;
+}
+
+footer {
+    grid-area: footer;
+    text-align: right;
+}
+
+/** Navigationsfarben */
+.navLi {
+    margin-bottom: 1em;
+    background: var(--color1a);
+    max-width: 200px;
+}
+
+.navLi:hover {
+    background: var(--color1b);
+}
+
+.navLink:hover {
+    cursor: pointer;
+    font-size: 17pt;
+}
+
+.expandLi ul {
+    display: none;
+}
+
+.expandLi:hover ul {
+    display: block;
+}
+
+.subLi {
+    border-bottom: 1px solid var(--color3d);
+    background: var(--color3b);
+}
+
+.subLi .navLink {
+    font-size: 13pt;
+    margin-left: 10px;
+}
+
+.subLi:last-of-type {
+    padding-bottom: 5px;
+    border-bottom: unset;
+}
+
+.subLi .navLink:hover {
+    font-size: 14pt;
+}
+
+/** Element Skalierung */
+.bewerbungsbild {
+    height: var(--header-height);
+}
+
+.banner {
+    height: var(--header-height);
+    width: calc(100% + 4px);
+}
+
+.iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.gdprLink:hover {
+    font-size: 14pt;
+}

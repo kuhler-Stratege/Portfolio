@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+    <link rel="stylesheet" type="text/css" href="../css/contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monomaniac+One&family=Ysabeau+Infant:wght@400&display=swap" rel="stylesheet">
+    <title>Contact</title>
+</head>
+<body>
+    <main class="contactWrapper">
+        <h1>
+            Contact
+        </h1>
+        <p>
+            I am always happy to hear from other people so if you have a Question or if you want to tell me something just use the contact form below.
+        </p>
+        <form action="https://formspree.io/f/xgejwzzw" method="POST">
+            <label for="name" class="formLabel">
+                Your name:
+            </label>
+            <br>
+            <input type="text" id="name" name="name" placeholder="Please enter your name" maxlength="100" class="formField" required>
+            <br>
+            <label for="email" class="formLabel">
+                Your email:
+            </label>
+            <br>
+            <input id="email" type="email" name="email" placeholder="Please enter your Email address" maxlength="100" class="formField" required>
+            <br>
+            <label for="subject" class="formLabel">
+                The subject of your message:
+            </label>
+            <br>
+            <input type="text" id="subject" name="subject" placeholder="Please enter the subject of your message" maxlength="200" class="formField" required>
+            <br>
+            <label for="message" class="formLabel">
+                Your message:
+            </label>
+            <br>
+            <textarea id="message" name="message" placeholder="Please enter your message" class="formField" required></textarea>
+            <br>
+            <input type="submit" value="Submit" class="submitBtn">
+        </form>
+    </main>
+</body>
+</html>
