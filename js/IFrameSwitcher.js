@@ -2,6 +2,8 @@ class IFrameSwitcher {
 
     IFrame = document.getElementsByTagName("iframe")[0];
 
+    //Todo: Seitentitel beim Klicken austauschen
+
     constructor() {
         const linkList = Array.from(document.getElementsByTagName("a")).filter(e => e.target === "");
         for(const link of linkList) {
