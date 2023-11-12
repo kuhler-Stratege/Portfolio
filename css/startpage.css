@@ -1,0 +1,46 @@
+main {
+    text-align: center;
+    margin: 20px auto 0 auto;
+}
+
+.CVSpan {
+    background: var(--color3b);
+    box-shadow: 0 0 10px 1px rgb(1 2 3 / 50%);
+    text-shadow: 2px 2px 4px var(--color3a);
+    padding: 10px;
+    width: 160px;
+
+    display: inline-grid;
+    grid-template-areas: "img link";
+    grid-template-columns: 30px auto;
+}
+
+.CVImage {
+    height: 30px;
+    grid-area: img;
+}
+
+.CVLink {
+    margin-top: 3px;
+    text-decoration: none;
+    grid-area: link;
+}
+
+.creaturesImg {
+    float: right;
+    height: 300px;
+    margin-top: 30px;
+    margin-right: 10px;
+}
+
+@media only screen and (max-width: 1080px) {
+    .creaturesImg {
+        margin-top: 55px;
+    }
+}
+
+@media only screen and (max-width: 780px) {
+    .creaturesImg {
+        display: none;
+    }
+}
