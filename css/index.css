@@ -12,7 +12,10 @@ h2 {
     display: grid;
     grid-template-areas: "nav header" "nav main" "nav footer";
     grid-template-columns: 230px auto;
-    grid-template-rows: var(--header-height) 80% 10%;
+    grid-template-rows: var(--header-height) auto var(--gdpr-height);
+    min-height: 1300px;
+    max-width: 99%;
+    margin-left: 10px;
 }
 
 nav {
@@ -45,6 +48,9 @@ nav ul {
 
 header {
     grid-area: header;
+    display: grid;
+    grid-template-columns: auto 220px;
+    grid-template-rows: calc(100% - 40px) 40px;
 }
 
 main {
@@ -105,6 +111,9 @@ footer {
 .banner {
     height: var(--header-height);
     width: calc(100% + 4px);
+
+    grid-row: 1 / 2;
+    grid-column: 1 / 3;
 }
 
 iframe {
@@ -117,9 +126,10 @@ iframe {
 }
 
 .bannerLinks {
-    position: absolute;
-    top: calc(var(--header-height) - 35px);
-    right: 83px;
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+
+    margin-top: 5px;
 }
 
 .bannerLinks a, .navSpan, .expandLi ul {
@@ -141,22 +151,22 @@ iframe {
     display: block;
 }
 
-@media only screen and (max-width: 1835px) {
-    .bannerLinks {
-        right: 5px;
-    }
-}
-
 @media only screen and (max-width: 1080px) {
     .wrapper {
         grid-template-areas: "header" "nav" "main" "footer";
         grid-template-columns: 99%;
-        grid-template-rows: auto auto 95% auto;
+        grid-template-rows: var(--header-height) var(--nav-height) 95% var(--gdpr-height);
+    }
+
+    header {
+        grid-template-columns: auto 220px;
+        grid-template-rows: calc(100% - 40px) 40px;
     }
 
     nav {
         display: grid;
-        grid-template-areas: "name nav";
+        grid-template-areas: "name innerNav";
+        grid-template-rows: 150px;
     }
 
     h2 {
@@ -167,7 +177,7 @@ iframe {
         display: none;
     }
     ul {
-        grid-area: nav;
+        grid-area: innerNav;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -201,13 +211,18 @@ iframe {
 }
 
 @media only screen and (max-width: 780px) {
+
+    :root{
+        --nav-height: 220px;
+    }
+
     .wrapper {
-        grid-template-areas: "header" "nav" "nav" "main" "footer";
-        grid-template-rows: auto 210px 82% 80px;
+        grid-template-areas: "header" "nav" "main" "footer";
+        grid-template-rows: var(--header-height) var(--nav-height) 82% var(--gdpr-height);
     }
 
     nav {
-        grid-template-areas: "textt" "nav";
+        grid-template-areas: "textt" "innerNav";
         grid-template-rows: 80px auto;
     }
 
@@ -216,7 +231,6 @@ iframe {
         margin: 0;
         margin-block-start: 0;
         margin-block-end: 0;
-        height: 100px;
         grid-area: textt;
     }
 
@@ -233,13 +247,14 @@ iframe {
     }
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 570px) {
     .wrapper {
-        grid-template-rows: auto 170px 112% 80px;
+        grid-template-rows: var(--header-height) var(--nav-height) auto var(--gdpr-height);
     }
 
     :root {
         --header-height: 100px;
+        --nav-height: 180px;
     }
 
     nav {
@@ -248,13 +263,6 @@ iframe {
 
     .main {
         grid-row: 3 / 5;
-    }
-
-    iframe {
-        position: absolute;
-        top: 30%;
-        left: 0;
-        height: 540px;
     }
 
     .navSpan {
@@ -276,5 +284,11 @@ iframe {
 
     .bannerLinks {
         display: none;
+    }
+}
+
+@media only screen and (max-width: 412px) {
+    :root {
+        --nav-height: 225px;
     }
 }
