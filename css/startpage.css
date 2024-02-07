@@ -33,6 +33,11 @@ main {
     margin-right: 10px;
 }
 
+.lastP {
+    text-align: left;
+    margin-left: 190px;
+}
+
 @media only screen and (max-width: 1080px) {
     .creaturesImg {
         margin-top: 55px;
